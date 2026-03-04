@@ -18,10 +18,10 @@ export default function Lista() {
   return (
     <ul className="list">
       <h5>Lista</h5>
-      {rzeczy.map(rzecz => (
+      {rzeczy.map((rzeczDoWybrania) => (
         <Rzecz
-          rzecz={rzecz}
-          key={rzecz.id}
+          rzecz={rzeczDoWybrania}
+          key={rzeczDoWybrania.id}
           onToggle={toggleSpakowane}
         />
       ))}
