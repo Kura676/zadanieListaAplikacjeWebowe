@@ -1,8 +1,13 @@
 import React from "react";
 
 function Forma() {
+  function handleSubmit(e){
+
+    e.preventDefault();
+
+  }
   return (
-    <form className="add-form">
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>Co dziś potrzebujesz do szkoły?</h3>
 
       <select>
@@ -12,7 +17,7 @@ function Forma() {
           </option>
         ))}
       </select>
-
+        <input type="text" placeholder="rzecz..." />
       <button>dodaj</button>
     </form>
   );
