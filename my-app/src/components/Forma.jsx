@@ -1,6 +1,6 @@
 import React from "react";
 
-function Forma() {
+export default function Forma() {
   function handleSubmit(e){
 
     e.preventDefault();
@@ -23,4 +23,3 @@ function Forma() {
   );
 }
 
-export default Forma;

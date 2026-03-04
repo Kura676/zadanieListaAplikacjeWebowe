@@ -1,6 +1,6 @@
 import React from "react";
 
-function Logo() {
+export default function Logo() {
   return (
     <div className="logo">
       <h1>Moja Aplikacja</h1>
@@ -8,4 +8,3 @@ function Logo() {
   );
 }
 
-export default Logo;
