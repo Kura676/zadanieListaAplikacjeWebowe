@@ -2,7 +2,7 @@ import { useState } from "react";
 import rzeczyData from "../data";
 import Rzecz from "./Rzecz";
 
-export default function Lista() {
+export default function Lista({items}) {
   const [rzeczy, setRzeczy] = useState(rzeczyData);
 
   function toggleSpakowane(id) {
@@ -18,7 +18,7 @@ export default function Lista() {
   return (
     <ul className="list">
       <h5>Lista</h5>
-      {rzeczy.map((rzeczDoWybrania) => (
+      {items.map((rzeczDoWybrania) => (
         <Rzecz
           rzecz={rzeczDoWybrania}
           key={rzeczDoWybrania.id}
