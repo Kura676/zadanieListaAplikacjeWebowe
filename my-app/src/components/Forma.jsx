@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 export default function Forma() {
+  const [opis, setOpis]= useState("state")
   function handleSubmit(e){
 
     e.preventDefault();
@@ -17,7 +19,8 @@ export default function Forma() {
           </option>
         ))}
       </select>
-        <input type="text" placeholder="rzecz..." />
+        <input type="text" placeholder="rzecz..." value={opis}
+        onChange={(e) => setOpis(e.target.value)}/>
       <button>dodaj</button>
     </form>
   );
