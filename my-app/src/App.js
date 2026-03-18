@@ -21,12 +21,18 @@ export default function App() {
   );
 } 
 
+function handleDeleteItem(id){
+
+setItems((items)=>items.filter((item)=>item.id !=id));
+
+}
+
   return (
     
     <div className="app">
       <Logo />
       <Forma  onHandleAddItems={handleAddItems} />
-      <Lista items={items} onToggle={handleToggleItem}/>
+      <Lista items={items} onHandleDeleteItem={handleDeleteItem} onToggle={handleToggleItem}/>
       <Stopka />
     </div>
   );

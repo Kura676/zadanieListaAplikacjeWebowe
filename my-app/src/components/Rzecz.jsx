@@ -1,6 +1,12 @@
-export default function Rzecz({ rzecz, onToggle }) {
+export default function Rzecz({ rzecz, onToggle,onHandleDeleteItem }) {
   return (
     <li>
+      <input
+  type="checkbox"
+  checked={rzecz.spakowane}
+  onChange={() => onToggle(rzecz.id)}
+/>
+
       <span
         style={
           rzecz.spakowane
@@ -13,7 +19,7 @@ export default function Rzecz({ rzecz, onToggle }) {
 
       <button
         className="skresl"
-        onClick={() => onToggle(rzecz.id)}
+        onClick={() => onHandleDeleteItem (rzecz.id)}
       >
         ❌
       </button>

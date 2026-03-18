@@ -2,7 +2,7 @@ import { useState } from "react";
 import rzeczyData from "../data";
 import Rzecz from "./Rzecz";
 
-export default function Lista({items, onToggle}) {
+export default function Lista({items, onToggle,onHandleDeleteItem}) {
 
   
 
@@ -14,6 +14,7 @@ export default function Lista({items, onToggle}) {
     rzecz={rzeczDoWybrania}
     key={rzeczDoWybrania.id}
     onToggle={onToggle}
+    onHandleDeleteItem={onHandleDeleteItem}
   />
 ))} 
     </ul>
