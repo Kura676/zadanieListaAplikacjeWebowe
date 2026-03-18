@@ -8,6 +8,9 @@ import Stopka from "./components/Stopka";
 
 export default function App() {
   const [items, setItems] = useState(rzeczy);
+  const iloscRzeczy = items.length; 
+  const iloscSpakowanych = items.filter((item)=>item.spakowane).length;
+
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
   }
@@ -33,7 +36,7 @@ setItems((items)=>items.filter((item)=>item.id !=id));
       <Logo />
       <Forma  onHandleAddItems={handleAddItems} />
       <Lista items={items} onHandleDeleteItem={handleDeleteItem} onToggle={handleToggleItem}/>
-      <Stopka />
+      <Stopka iloscRzeczy={iloscRzeczy} iloscSpakowanych={iloscSpakowanych} />
     </div>
   );
 }
