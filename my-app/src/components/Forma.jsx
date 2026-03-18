@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Forma({onHandleAddItems}) { 
   const [opis, setOpis] = useState("");
-  const [numer, setNumer] = useState(1);
+  const [ilosc, setIlosc] = useState(1);
 
   
 
@@ -14,7 +14,7 @@ export default function Forma({onHandleAddItems}) {
 
     const nowaRzecz = {
       opis,
-      numer,
+      ilosc,
       spakowane: false,
       id: Date.now(),
     };
@@ -23,7 +23,7 @@ export default function Forma({onHandleAddItems}) {
     onHandleAddItems  (nowaRzecz);
 
     setOpis("");
-    setNumer(1);
+    setIlosc(1);
   }
 
   return (
@@ -31,8 +31,8 @@ export default function Forma({onHandleAddItems}) {
       <h3>Co dziś potrzebujesz do szkoły?</h3>
 
       <select
-        value={numer}
-        onChange={(e) => setNumer(Number(e.target.value))}
+        value={ilosc}
+        onChange={(e) => setIlosc(Number(e.target.value))}
       >
         {Array.from({ length: 20 }).map((_, i) => (
           <option key={i} value={i + 1}>
